@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            let originalstring="w3resource";
+            function rotateright(){
+              const array= originalstring.split('');
+              const last= array.pop();
+              array.unshift(last);
+              const rotate=array.join('');
+            
+              originalstring=rotate;
+
+              document.getElementById("rotated").textContent=rotate;
+            }
+            setInterval(rotateright,400);
+        </script>
+        <h2> Automatic Rotation</h2>
+        <p id="rotated"> w3resource</p>
+    </body>
+</html>

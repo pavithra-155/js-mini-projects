@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>Current date</h2>
+        <p id="output"></p>
+        <script>
+            const CurrentDate=new Date();
+            const date=CurrentDate.getDate();
+            const month=CurrentDate.getMonth()+1;
+            const year=CurrentDate.getFullYear();
+            const format1=`${date}-${month}-${year}`;
+            const format2=`${date}/${month}/${year}`;
+            const format3=`${month}-${date}-${year}`;
+            const format4=`${month}/${date}/${year}`;
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = `${format1}<br>${format2} <br> OR <br> ${format3} <br>${format4}`;
+        </script>
+    </body>
+</html>

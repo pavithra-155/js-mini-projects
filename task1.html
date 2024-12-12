@@ -1,0 +1,22 @@
+<html>
+    <head><title>Current day and time</title>
+    </head>
+    <body>
+        <h2>Current Day and Time</h2>
+        <p id="dateTime"></p>
+        <script>
+          const CurrentDate= new Date();
+          const days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+          const day=days[CurrentDate.getDay()];
+          let hour=CurrentDate.getHours();
+          const mins=CurrentDate.getMinutes();
+          const sec=CurrentDate.getSeconds();
+          const prepand = (hour >= 12) ? " PM " : " AM ";
+          hour = (hour >= 12) ? hour - 12 : hour;
+          hour = (hour === 0) ? 12 : hour; 
+          const timeString = `Today is: ${day}<br>Current time: ${hour} ${prepand}:${mins}:${sec}`;
+          document.getElementById("dateTime").innerHTML = timeString;
+
+        </script>
+    </body>
+</html>

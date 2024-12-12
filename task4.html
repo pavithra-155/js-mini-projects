@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h3>Area of a Triangle</h3>
+        <p id="output"></p>
+        <script>
+            const a=5;
+            const b=6;
+            const c=7;
+            const s= (a+b+c)/2;
+            const Area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = `The area of a triangle with sides 5, 6, 7 is ${Area} square units.`;
+    </script>
+    </body>
+</html>
